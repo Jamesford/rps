@@ -1,0 +1,8 @@
+Port=":8080"
+VerifyToken=""
+Scope=""
+ClientID=""
+ClientSecret=""
+RedirectURI=""
+SuccessRedirect="https://slack.com/apps/manage"
+FailureRedirect=""
