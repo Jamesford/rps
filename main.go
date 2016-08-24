@@ -184,8 +184,8 @@ func interactionHandler(c echo.Context) error {
         currentIsWinner, currentIsLoser, tieGame := resultForCurrent(currentPlayer.Move, opponentPlayer.Move)
 
         // Prep Both Message Texts
-        opponentMessageText := challengeMessageText(false, currentPlayer.Name)
-        currentMessageText := challengeMessageText(true, opponentPlayer.Name)
+        opponentMessageText := challengeMessageText(!currentIsChallenger, currentPlayer.Name)
+        currentMessageText := challengeMessageText(currentIsChallenger, opponentPlayer.Name)
 
         // Handle tie game
         if tieGame {
